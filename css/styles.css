@@ -68,6 +68,7 @@ a {
     top: 0;
     background-color: #FFFFFF; 
     z-index: 9;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -111,8 +112,9 @@ a {
     letter-spacing: 0.02em;
     color: #2E2F42;
     padding: 24px 0;
-    transition-property: color;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position:relative;
+    
 
 }
 
@@ -120,9 +122,11 @@ a {
     content: '';
     position: absolute;
     border-radius: 2px;
-    width: 48px;
+    width: 100%;
     height: 4px;
     background-color:#404BBF;
+    left: 0;
+    bottom: -1px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -152,6 +156,8 @@ a {
     line-height: 150%;
     letter-spacing: 0.02em;
     color: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .adress-menu-link:hover, .adress-menu-link:focus, .adress-menu-link:active {
@@ -170,6 +176,7 @@ a {
     background-size: cover;
     padding-top:188px;
     padding-bottom: 188px;
+    max-width: 1440px;
 }
 
 .hero .container {
@@ -207,8 +214,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     border: none;
-    transition-property: background-color;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  .hero-button:hover, .hero-button:focus {
@@ -396,7 +402,7 @@ color:#FFFFFF;
     width: calc((100% - 24*5) / 6);
     height: 420px;
     position: relative;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .portfolio-list-item:hover, .portfolio-list-item:focus {
@@ -420,7 +426,8 @@ font-size: 16px;
 line-height: 150%;
 letter-spacing: 0.02em;
 color: #f4f4fd;
-padding: 40px 32px 164px;
+padding: 40px 32px;
+padding-bottom: 164px;
 transform: translateY(100%);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -436,6 +443,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio-p {
     margin-top: 8px;
     padding-left: 16px;
+    
 
 }
 /* #region Section 3 */
